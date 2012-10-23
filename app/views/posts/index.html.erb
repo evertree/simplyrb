@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+  <% @post = post %>
+  <%= render 'post' %> 
+  <%= link_to 'Show post', show_post_path(@post.url_title)%>
+<% end %>
+<br />
+
+<%= link_to 'New Post', new_post_path %>

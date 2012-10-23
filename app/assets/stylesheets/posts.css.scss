@@ -1,0 +1,31 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blog_post {
+	width: 550px;
+	left: 25px;
+	position: relative;
+}
+
+.title {
+	font-family: Copperplate, sans-serif;
+	font-size: 20px;
+	color: #fff;
+	background: #c00;
+	//height: 10px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+.entry {
+	font-family: Cochin, sans-serif;
+	font-size: 15px;
+	color: #000;
+	font-weight: lighter;
+	padding-bottom: 30px;
+	background: #fee;
+	padding-left: 20px;
+}
