@@ -1,7 +1,16 @@
 Simplyrb::Application.routes.draw do
-  resources :posts
+  get "comments/index"
+
+  get "comments/create"
+
+  get "comments/destroy"
+  resources :posts do
+    resources :comments
+  end
+
   root :to => 'posts#index'
   match "/:url_title" => 'posts#show', as: :show_post
+  match "/:url_title/newcomment" => 'comments#create', as: :new_comment
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

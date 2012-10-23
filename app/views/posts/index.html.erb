@@ -1,7 +1,8 @@
 <% @posts.each do |post| %>
   <% @post = post %>
   <%= render 'post' %> 
-  <%= link_to 'Show post', show_post_path(@post.url_title)%>
+  <%= link_to comment_count, show_post_path(@post.url_title)%>
+  <%= link_to 'Add comment', new_comment_path(@post.url_title) %>
 <% end %>
 <br />
 
