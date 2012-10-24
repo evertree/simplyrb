@@ -10,8 +10,7 @@ Simplyrb::Application.routes.draw do
 
   root :to => 'posts#index'
   match "/:url_title" => 'posts#show', as: :show_post
-  match "/:url_title/newcomment" => 'comments#create', as: :new_comment
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

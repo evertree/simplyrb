@@ -1,0 +1,9 @@
+<% @post.comments.each do |comment| %>
+	<div class="comment">
+		<%= commenter_says(comment.commenter) %>
+		<div class="time">
+			<%= time_ago(comment.created_at) %>
+		</div>
+		<div class="body"><%= comment.body %></div>
+	</div>
+<% end %>
