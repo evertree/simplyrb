@@ -1,9 +1,8 @@
 Simplyrb::Application.routes.draw do
-  get "comments/index"
+  ActiveAdmin.routes(self)
 
-  get "comments/create"
+  devise_for :admin_users, ActiveAdmin::Devise.config
 
-  get "comments/destroy"
   resources :posts do
     resources :comments
   end

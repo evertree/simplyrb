@@ -3,9 +3,8 @@
   <%= render 'post' %>
 
   <%= link_to comment_count, show_post_path(@post.url_title) unless comment_count == '0 comments' %>
-
+<div class="add_comment">
   <%= link_to 'Add comment', show_post_path(@post.url_title) %>
+</div>
 <% end %>
 <br />
-
-<%= link_to 'New Post', new_post_path %>

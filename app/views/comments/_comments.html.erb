@@ -1,4 +1,4 @@
-<% @post.comments.each do |comment| %>
+<% @post.comments.reverse.each do |comment| %>
 	<div class="comment">
 		<%= commenter_says(comment.commenter) %>
 		<div class="time">
