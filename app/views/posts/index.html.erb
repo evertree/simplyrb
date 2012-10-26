@@ -4,7 +4,7 @@
   <% @post = post %>
   <%= render 'post' %>
 
-  <%= link_to comment_count, show_post_path(@post.url_title) unless comment_count == '0 comments' %>
+  <%= link_to comment_count, show_post_path(@post.url_title), :class => 'comment_link' unless comment_count == '0 comments' %>
 <div class="add_comment">
   <%= link_to 'Add comment', show_post_path(@post.url_title) %>
 </div>

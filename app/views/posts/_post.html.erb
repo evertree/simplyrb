@@ -3,5 +3,5 @@
 		<div class="time">Posted <%= time_ago(@post.created_at) %></div>
 	</div>
     <div class="entry">
-    	<%= simple_format @post.entry %></div>
+    	<%= p_strip(simple_format @post.entry) %></div>
 </div>
