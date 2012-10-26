@@ -2,5 +2,6 @@
 	<div class="title"><%= @post.title %>
 		<div class="time">Posted <%= time_ago(@post.created_at) %></div>
 	</div>
-    <div class="entry"><%= @post.entry %></div>
+    <div class="entry">
+    	<%= simple_format @post.entry %></div>
 </div>
