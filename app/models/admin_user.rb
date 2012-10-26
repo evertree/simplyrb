@@ -9,7 +9,7 @@ class AdminUser < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-  #after_create { |admin| admin.send_reset_password_instructions }
+  after_create { |admin| admin.send_reset_password_instructions }
 
   def password_required?
   	new_record? ? false: super
