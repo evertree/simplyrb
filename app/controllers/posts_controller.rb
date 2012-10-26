@@ -14,11 +14,14 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find_by_url_title(params[:url_title])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
+      @post = Post.find_by_url_title(params[:url_title])
+    if @post.nil?
+      redirect_to root_path, :notice => 'No such page'
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @post }
+      end
     end
   end
 end

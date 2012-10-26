@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 
   def title_to_url
-		self.title.downcase.gsub(/\s/,'-')
+  		url_title = self.title.downcase.gsub(/\W/,'-')
+		url_title = url_title.gsub(/-{2,}|\A\-|\-\Z/,'')
 	end
 end
