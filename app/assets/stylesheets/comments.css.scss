@@ -8,15 +8,18 @@
 	border-radius: 10px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-
-	.time{
-		float: right;
-		font-style: italic;
-		font-size: 11px;
-	}
 }
 
 .body {
 	padding-top: 5px;
 	padding-bottom: 15px;
+}
+
+.new_comment {
+	#comment_body {
+		height: 200px;
+		width: 600px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
 }

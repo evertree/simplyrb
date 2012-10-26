@@ -3,10 +3,13 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-   @comment = @post.comments.create(params[:comment])
+    @comment = @post.comments.create(params[:comment])
+
     respond_to do |format|
       if @comment.save
         format.html { redirect_to show_post_path(@post.url_title) }
+      else
+        format.html { redirect_to show_post_path(@post.url_title), :notice => "Error: Comment not posted" }
       end
     end
   end

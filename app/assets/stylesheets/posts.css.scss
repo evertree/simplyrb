@@ -32,4 +32,11 @@
 
 .add_comment {
 	display: inline;
+	border-left: 1px solid;
+	padding-left: 5px;
+}
+
+#notice {
+	background: #fed;
+	color: red;
 }
