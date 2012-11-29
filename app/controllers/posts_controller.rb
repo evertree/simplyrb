@@ -20,6 +20,7 @@ class PostsController < ApplicationController
     else
       respond_to do |format|
         format.html # show.html.erb
+        format.js { render "show", :locals => {title: params[:url_title]}}
         format.json { render json: @post }
       end
     end

@@ -1,0 +1,8 @@
+<%=link_to image_tag("simplyrb.png"), root_path %>
+
+<h1>Recent posts:</h1>
+<ul>
+	<% recent_posts.each do |post| %>
+		<li><%= link_to truncate(post.title, length: 20), show_post_path(post.url_title) %></li>
+	<% end %>
+</ul>

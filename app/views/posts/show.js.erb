@@ -1,0 +1,12 @@
+var title = "#<%= title %>";
+var path = String($(title).children('a')[0]);
+var path_end = path.substr(path.lastIndexOf('#'));
+
+if (path_end == '#new_comment') {
+  $(title).show("drop", {direction: "up"}, 1000);
+  $(title).html("<%=j link_to 'Hide', show_post_path(@post.url_title) + '#hide' , remote: true %><%=j render template: 'comments/_post_comment' %>");
+}
+
+else {
+  $(title).html("<%=j link_to 'Add comment', show_post_path(@post.url_title) + '#new_comment', remote: true %>");
+}

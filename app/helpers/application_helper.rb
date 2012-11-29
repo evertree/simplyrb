@@ -8,4 +8,8 @@ module ApplicationHelper
 		text = text.gsub(/\A<p>/,"")
 		text = sanitize(text.gsub(/<\/p>\z/,""))
 	end
+
+	def recent_posts
+		Post.all.reverse.first(5)
+	end
 end

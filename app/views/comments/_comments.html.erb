@@ -1,9 +1,12 @@
+<div class="comment_group">
 <% @post.comments.reverse.each do |comment| %>
-	<div class="comment">
-		<%= commenter_says(comment.commenter) %>
-		<div class="time">
+  <div class="<%= cycle('odd_comment', 'even_comment') %>">
+		<strong><%= commenter_says(comment.commenter) %></strong>
+		<span class="time">
 			<%= time_ago(comment.created_at) %>
-		</div>
+		</span>
+    <br>
 		<div class="body"><%= p_strip(simple_format comment.body) %></div>
 	</div>
 <% end %>
+</div>

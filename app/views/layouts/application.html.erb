@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Simply.rb</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div id="container">
-		<div id="logo">
-			<%=link_to image_tag("simplyrb.png"), root_path %>
-		</div>
-	<%= yield %>
-	</div>
+	<head>
+	  <title>Simply.rb</title>
 
-</body>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<aside>
+			<%= render template: 'layouts/_sidebar' %>
+		</aside>
+		<div id="container">
+			<%= yield %>
+		</div>
+	</body>
 </html>

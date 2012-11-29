@@ -4,7 +4,6 @@
 
 .blog_post {
 	width: 550px;
-	left: 25px;
 	position: relative;
 }
 
@@ -12,10 +11,9 @@
 	font-family: Copperplate, sans-serif;
 	font-size: 20px;
 	color: #fff;
-	background: #c00;
-	//height: 10px;
+	background: #4e5263;
 	padding-left: 10px;
-	margin-top: 15px;
+	//margin-top: 15px;
 	padding-bottom: 5px;
 	
 }
@@ -26,17 +24,24 @@
 	color: #000;
 	font-weight: lighter;
 	padding-bottom: 30px;
-	background: #fee;
+	background: #ede7e9;
 	padding-left: 20px;
 }
 
 .comment_link {
-	border-right: 1px solid;
+	border-right: 1px solid #000;
+
 	padding-right: 5px;
 }
 
-.add_comment {
-	display: inline;
+.comment_bar {
+	margin-bottom: 20px;
+	margin-right: 5px;
+	text-align: right;
+
+	div {
+		display: inline;
+	}
 }
 
 #notice {
